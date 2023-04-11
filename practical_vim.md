@@ -1,6 +1,5 @@
 ## Practical Vim, Second Edition
 
-
 ### Make corrections instantly from insert mode
 
   * <C-h\> : Delete back one character
@@ -35,3 +34,7 @@
 
   * o goes to the other end of the highlighted text (really handy if you realize during a selection that you started in the wrong place)
   * Prefer gUit to vitU (the former is more repeatable because it is considered 1 command [gUit], whereas the latter is 2 commands [vit, U])
+
+### Multiple files
+
+
