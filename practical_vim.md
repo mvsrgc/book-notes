@@ -38,3 +38,11 @@
 ### Netrw
 
   * [:help netrw-quickmap](https://vimhelp.org/pi_netrw.txt.html#netrw-quickmaps)
+
+### Windows
+
+  * <C-w\><C-w\> does the same thing as <C-w>w. That means you can hold the ctrl key and press ww to change window.
+  * <C-w\>c closes the active window (alternative to :q)
+  * <C-w\>o closes all other windows
+
+
