@@ -45,4 +45,11 @@
   * <C-w\>c closes the active window (alternative to :q)
   * <C-w\>o closes all other windows
 
+### Save file to nonexistent directory
 
+  * :e madeup/dir/doesnotexist.txt
+  * :write `Error can't open file for writing`
+
+  * :e madeup/dir/doesnotexist.txt
+  * :! mkdir -p %:h
+  * :write
