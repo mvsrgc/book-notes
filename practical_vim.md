@@ -35,6 +35,6 @@
   * o goes to the other end of the highlighted text (really handy if you realize during a selection that you started in the wrong place)
   * Prefer gUit to vitU (the former is more repeatable because it is considered 1 command [gUit], whereas the latter is 2 commands [vit, U])
 
-### Multiple files
+### Netrw
 
-
+  * [:help netrw-quickmap](https://vimhelp.org/pi_netrw.txt.html#netrw-quickmaps)
