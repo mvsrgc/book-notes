@@ -53,3 +53,19 @@
   * :e madeup/dir/doesnotexist.txt
   * :! mkdir -p %:h
   * :write
+
+### Real line vs display line
+
+  * {j,k,h,l} navigate real lines
+  * g{j,k,h,l} navigate display lines
+
+### Combining d operator with the search motion is a power move
+
+### Hack to jump back to most recent change
+
+  * u<C-r> does and undo and then a redo, which cancel each other out but place our cursor
+    on the last change
+
+### Global mark
+
+  * mM sets a global mark that allows to jump between files
