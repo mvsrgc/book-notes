@@ -1,5 +1,43 @@
 ## Operating System Concepts
 
+### Chapter 8: Deadlocks
+* **8.1: System Model**
+	* Under the normal mode of operations, a thread may utilize a resource in only the following sequence:
+		1. Request
+		1. Use
+		1. Release
+	* Examples of request and release:
+		* open() and close() of a file, allocate() and free() memory, wait() and signal() on semaphores,
+		  acquire() and release() on mutexes.
+	* Locking tools prevent race conditions, however they introduce the possibility of deadlocks.
+	* Deadlock code example (Remember that `pthread_mutex_lock` blocks the thread until it can acquire the lock!):
+	  ```c
+	  void *do_work_one(void *param) {
+		pthread_mutex_lock(&first_mutex);
+		pthread_mutex_lock(&second_mutex);
+
+		// Do some work
+
+		pthread_mutex_unlock(&second_mutex);
+		pthread_mutex_unlock(&first_mutex);
+	  }
+
+	  void *do_work_two(void *param) {
+		pthread_mutex_lock(&second_mutex);
+		pthread_mutex_lock(&first_mutex);
+
+		// Do some work
+
+		pthread_mutex_unlock(&first_mutex);
+		pthread_mutex_unlock(&second_mutex);
+	  }
+	  ```
+* **8.3.2: Resource Allocation Graph**
+	* If the graph contains no cycles, there is no deadlock.
+	* If the graph contains a cycle, there is a *possibility* of deadlock.
+	* If each resource type has exactly one instance, then a cycle means a deadlock has occured.
+	* If a cycle involves only a set of resource types, and each has only one instance, a deadlock has occured.
+
 ### Chapter 9: Main Memory
 * **9.1.1 Basic Hardware**
 	* Main memory and registers are the only general-storage the CPU can access.
@@ -18,6 +56,7 @@
 	* The linker in turn binds the relocatable addresses to absolute addresses.
 	* CPU (Logical address) -> Memory management unit (Physical address) -> Physical memory
 	* The logical address is usually referred to as *virtual address*.
+
 * **9.2.2 Memory Allocation**
 	* First fit: Allocate the first hole that is big enough.
 	* Best fit: Allocate the *smallest* hole that is big enough. Produces *smallest* leftover hole.
