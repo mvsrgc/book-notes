@@ -67,10 +67,32 @@ of another bridge are always *designated* ports.
 	* MST cree une instance STP pour un group de vlans.
 
 ## Chapitre 6
-Lorem ipsum dolor sit amet.
+* Quels sont les modeles de service du cloud?
+	* Software as a Service (SaaS): Services accessibles a travers une application offerte a l'usager par le nuage.
+		* Example: Amazon Connect
+	* Platform as a Service (PaaS): Ensemble d'environnements et d'outils de developpement offerts par le fournisseur du nuage au client pour developper et deployer des applications sur l'infrastructure infonuagique.
+		* Example: AWS Elastic Beanstalk, AWS Lambda, AWS App Runner
+	* Infrastructure as a Service (IaaS): Services informatiques (CPU, stockage, reseaux) accessible a l'usager qui est en mesure de deployer et executer des logiciels. L'usager peut controler l'OS, les applications et les composantes (Firewall, IDS, etc.)
+		* Example: EC2, S3, VPC (Virtual Private Cloud), RDS (Relational Database Service)
+
+	<img src="images/comparison.png" alt="Comparison" style="width:70%;height:auto;"/>
+* Qu'entend-t-on par la virtualisation du reseau?
+	* Abstraction des ressources physiques du reseau tels que les commutateurs, routeurs, serveurs et une version
+	  logicielle et flexible.
+* Elasticite
+	* Vertical: Augmenter/reduire la capacite en ressources de la machine virtuelle/container
+	* Horizontal: Ajouter plus de machines virtuelles/containers
+* Deux techniques utilisees dans la migration
+	* Migration basee sur la pre-copie de la memoire (La MV est en execution, ses pages memoires sont marques read-only avant d'etre copiees, une fois toutes les pages copiees la MV source est suspendue et la MV dest. prend la releve)
+	* Migration basee sur la post-copie de la memoire (La MV source est suspendue, les registres et la memoire de la MV source sont copies dans la MV de dest., la MV de dest. prend la releve et le contenu de la mem. de MV source est copie progressivement)
+* Qu'est-ce que NFV?
+	* Migrer des composantes physiques d'un reseau telles qu'un routeur, commutateur, pare-fun, load-balencer vers des machines virtuelles ou des containers qui tournent sur du hardware generique.
 
 ## Chapitre 7
+
 ## Chapitre 8
+
 ## Chapitre 9
+
 ## Chapitre 10
 
